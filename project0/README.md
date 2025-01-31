@@ -2,8 +2,7 @@
 
 Due: **Friday, February 7th, 2025 at 11:59PM**
 
-Prior to starting **Project 0**, ensure you have went through the entirety of the [Setup README](https://github.com/umd-cmsc389e/projects/tree/main/setup). 
-
+Prior to starting **Project 0**, ensure you have went through the entirety of the [Setup README](https://github.com/umd-cmsc389e/spring25/tree/main/setup#readme). 
 ## Importing Projects
 To import the project, you need to download `project0.zip`, extract it, and move it into the `saves` folder of your Fabric installation folder. The easiest way of doing this is the following:
 
