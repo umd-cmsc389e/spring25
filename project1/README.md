@@ -31,14 +31,14 @@ Projects will be submitted and autograded via **Gradescope**. If you are not alr
 
 ## Section 1 - Logic Gates
 
-### **Task 1**: Combine the **blue input** and the **orange output** with a **NOT gate**.
+### **Task 1**: Combine the **blue input** with a **NOT gate**.
 
 | Input (Blue) | Output |
 |--------------|-----------------|
 | 0            | 1               |
 | 1            | 0               |
 
-### **Task 2**: Combine the **blue input** and the **orange output** with a **OR gate**.
+### **Task 2**: Combine the **blue input** and the **green input** with a **OR gate**.
 
 | Input 1 (Blue) | Input 2 (Green) | Output |
 |----------------|-----------------|-----------------|
