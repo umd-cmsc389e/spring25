@@ -143,6 +143,7 @@ Let's start out by building the **8-bit logic gates**. I would highly recommend 
 - Then, feed **input A** and **input B** into each of the operations, using the **wire crossing technique**.
     - It may help to do this on the bottom level first, and then **stack it 7 times up**.
     - When **stacking**, it is benefical to stack components separately, otherwise there will be spacing issues (height 2 builds vs. height 3 builds). We suggest you stack the crossed wires and the logic gates separately  and (`//stack 7 up`)
+- Note: you might want to add a **repeater** after the **adder** we provide you with in case the signal dies before reaching the lamps/outputs. You may have to do this for all future parts.
 - **Hint 7A:** Single-layer example of crossing wires to feed into **NAND** and **OR** gates.
 - **Hint 7B:** 8-bit example of crossing wires to feed into **NAND** and **OR** gates (i literally just used `//stack 7 up`)
 - We've essentially made a machine that takes in **two inputs** and computes a bunch of different operations with them! It should look something like the following image:
