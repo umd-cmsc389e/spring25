@@ -1,6 +1,6 @@
 # CMSC389E Project 2 - The ALU
 
-Due: **Friday, March 14th, 2025 at 11:59PM** on **[Gradescope](https://www.gradescope.com/courses/936971/assignments/5875134/)**
+Due: **Sunday, March 16th, 2025 at 11:59PM** on **[Gradescope](https://www.gradescope.com/courses/936971/assignments/5875134/)**
 
 This project involves building an **Arithmetic Logic Unit (ALU)** in Minecraft using Redstone! The goal is to implement fundamental digital logic circuits and integrate them into a working **ALU**. We will then extend the functionality of the **ALU** with **opcodes**.
 
@@ -34,6 +34,7 @@ Projects will be submitted and autograded via **Gradescope**. To submit the proj
 * This project will **heavily** rely on the use of **Worldedit**, as with most projects in the future. We recognize that this can get tedious, and we are always open to feedback on ways that we can improve the course and the projects. 
 * However, we also believe that in the context of building digital circuits in Minecraft for a **CPU**, understanding and being comfortable with using **worldedit** will be **instrumental**, and there's no way to get around this. Without **worldedit**, we'd have to provide you with largely filled-in templates for each problem, and there wouldn't be much to do (it also probably wouldn't be very fun). Our goal for you in this class is for you to essentially have placed **every block** in building a **CPU** with the assistance of **worldedit**. Of course, we won't have you do anything that is **too tedious** even with **worldedit**, like building the **Instruction Memory** or **RAM Unit**, which you will see in the future. 
 * Because of **Worldedit**, it may be very easy to accidentally destroy the input/output **redstone lamps**. Please be careful to make sure you *don't do this*, and if you accidentally do, use `//undo`.
+* You might want to add a **repeater** after the **adder** we provide you with in case the signal dies before reaching the lamps/outputs. You may have to do this for all parts after **Problem 7**. 
 
 ## Before we get to the ALU...
 
@@ -143,7 +144,9 @@ Let's start out by building the **8-bit logic gates**. I would highly recommend 
 - Then, feed **input A** and **input B** into each of the operations, using the **wire crossing technique**.
     - It may help to do this on the bottom level first, and then **stack it 7 times up**.
     - When **stacking**, it is benefical to stack components separately, otherwise there will be spacing issues (height 2 builds vs. height 3 builds). We suggest you stack the crossed wires and the logic gates separately  and (`//stack 7 up`)
-- Note: you might want to add a **repeater** after the **adder** we provide you with in case the signal dies before reaching the lamps/outputs. You may have to do this for all future parts.
+
+### ‼️PLEASE CONSIDER THE FOLLOWING NOTE: You might want to add a **repeater** after the **adder** we provide you with in case the signal dies before reaching the lamps/outputs. You may have to do this for all future parts.‼️
+
 - **Hint 7A:** Single-layer example of crossing wires to feed into **NAND** and **OR** gates.
 - **Hint 7B:** 8-bit example of crossing wires to feed into **NAND** and **OR** gates (i literally just used `//stack 7 up`)
 - We've essentially made a machine that takes in **two inputs** and computes a bunch of different operations with them! It should look something like the following image:
