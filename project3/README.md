@@ -271,7 +271,9 @@ Let's get started by building a single register, with a **reading** function. No
      - In **Problem 9**, select the region from the *lapis block* at `(-148, 57, 1)` to the *emerald block* at `(-157, 85, 31)`. Then stand on the *emerald block* and use `//copy`.
     - In **Problem 10**, stand on the *emerald block* at `(-183, 85, 31)` and use `//paste`.
 - **Hint 10:** We provide you with some practice with the worldedit `//flip` command. Use `//flip` to mirror the decoder so it looks like the following image:
+
     ![image](https://hackmd.io/_uploads/HyOnfk621g.png)
+    
     - There are many ways to use `//flip` correctly, depending on where you are facing. Experiment with `//flip back`, `//flip right`, etc. to get a sense for how flip works.
     - You may want to read the **Worldedit hint** below before attempting!
 - **Worldedit hint**:
