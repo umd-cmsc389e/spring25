@@ -339,6 +339,7 @@ Let's get started by building a single register, with a **reading** function. No
     In the end, **r6** should contain a value of **233**, the **13th** fibonacci number!
     - To run an instruction like `ADD r4 r3 r2`, ensure the inputs **read address 1** is **r3**, **read address 2** is **r2**, **write address** is **r4**, the **ALU setting** is **ADD**, and the **Data MUX** is set to **REG ALU**.  Then, send a **clock signal**.
     - To run an instruction like `LDI r1 1`, ensure **write address** is **r1**, the immediate input is **1**, and the **Data MUX** is set to **REG IMMEDIATE**. Then, send a **clock signal**. 
+    - To check the contents of a register like `r6`, you enter an instruction like `ADD r0 r0 r6` and look at the **ALU result**. Executing the instruction does nothing because we are storing into `r0`, the **zero register**.
 - You implementation should look something like this:
 ![image](https://hackmd.io/_uploads/r1v5fzp3Jl.png)
 - And **CONGRATULATIONS!** You've essentially implemented the *bare minimum* components for a **CPU**. You can do some really *crazy* stuff with just an **ALU** and **Register File**, like computing infinitely large sequences of integers (although, we don't have turing completeness just yet...)
