@@ -159,8 +159,7 @@ The reason why we have **two read addresses** and **two outputs** is because we 
 
 In order to read two registers in the **Register File** at the same time, we will explore **Dual-Read** as you will see in the later parts. The multiplexer going into the **Data** input of the **Register File** allows us to select whether an **Immediate Value** or the **ALU Result** gets written into the **Register File**. With this, we'll be able to perform the successive computations that we've been dreaming about above! This is a high-level overview of what we want to achieve in this project.
 
-Note, the **Register File** that we will be implementing in this project contains **SEVEN** registers addressed **r1, r2, r3, r4, r5, r6, and r7**. Note, we do not implement **r0** as we will reserve it to be the **zero register** - a **register** whose value is always **zero**. This may seem useless at first, but we will so that it's actually quite *nifty ඞ*. The implemented **Register File** will be similar to that of the diagram you saw **in class**, except we only have **seven** instead of **eight** registers, and **dual-read** is implemented via **simulated-dual read**:
-![image](https://hackmd.io/_uploads/S1GIg1K2kl.png)
+Note, the **Register File** that we will be implementing in this project contains **SEVEN** registers addressed **r1, r2, r3, r4, r5, r6, and r7**. Note, we do not implement **r0** as we will reserve it to be the **zero register** - a **register** whose value is always **zero**. This may seem useless at first, but we will so that it's actually quite *nifty ඞ*. 
 
 Let's get started by building a single register, with a **reading** function. Note, the **reading** function simulates a **multiplexer** when we add more registers!
 
