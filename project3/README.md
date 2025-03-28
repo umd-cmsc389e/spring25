@@ -32,7 +32,7 @@ Projects will be submitted and autograded via **Gradescope**. To submit the proj
 * For any of the tasks, **DO NOT** destroy or move **ANY** of the **redstone lamps**. We hardcode the input/output locations for the autograder to test your builds. 
 * You may build outside of the **Gold Blocks**, but we always provide you with enough space to complete your build inside. 
 * Because of **Worldedit**, it may be very easy to accidentally destroy the input/output **redstone lamps**. Please be careful to make sure you *don't do this*, and if you accidentally do, use `//undo`.
-* We strongly urge you to **test your "code"** before you submit, since the **autograder** takes like 5 years to run lmao. 
+* We strongly urge you to **test your "code"** before you submit, since the **autograder** takes like 5 years to run lmfao
 
 ## Resources
 
@@ -101,8 +101,7 @@ Projects will be submitted and autograded via **Gradescope**. To submit the proj
 
 #### Note 3: Preferred D Latch Implementation
 - This is the preferred implementation of a **D Latch** in Minecraft using the repeater **locking** mechanic. The **vertical** repeater in the image is the repeater storing the **data**, while the **horizontal** repeater is the **locking** repeater.
-- The **black bar** across the **data** repeater indicates the repeater's state is being **locked**. When a repeater is **locked**, its state **(powered or unpowered)** remains unchanged until its **unlocked**.
-- A repeater is **locked** by powering it with another repeater from the **side**.
+- A repeater is **locked** by powering it with another repeater from the **side**. When a repeater is **locked**, its state **(powered or unpowered)** remains unchanged until its **unlocked**.
 ![image](https://hackmd.io/_uploads/rk_-cpunyg.png)
 - Play around with it and convince yourself that it is indeed an implementation of a **D Latch**! Also, notice that the **Enable** input is inverted. 
 - You may use this implementation of a **D Latch** from now on!
@@ -116,11 +115,10 @@ Projects will be submitted and autograded via **Gradescope**. To submit the proj
     - We want the **memory state** to change on the **leading edge** of the clock pulse
         - The **leading edge** is when the clock signal transitions from **OFF** to **ON**
         - The **trailing edge** is when the clock signal transitions from **ON** to **OFF**
-    - We want no changes to occur to the **memory state** after the **leading edge** of the **clock pulse**
-        - After the **leading edge** of the clock pulse, any changes to the **data** input will not be reflected until the next **clock cycle** or **leading edge** of the clock pulse
-- Note, we've thrown away the **Q'** output since we really just care about the **Q** output - the current memory state.
+- After the **leading edge** of the clock pulse, any changes to the **data** input will not be reflected until the next **clock cycle** or **leading edge** of the clock pulse
 - The following logic gate description may help you:
 ![image](https://hackmd.io/_uploads/Bk0dupd3yg.png)
+- Note, we've thrown away the **Q'** output since we really just care about the **Q** output - the current memory state.
 - Example test case:
     1. Ensure **Data**, **Clock**, and **Q** are initially **OFF**.
     2. Turn **Data ON**. **Q** should not change.
@@ -165,6 +163,7 @@ Let's get started by building a single register, with a **reading** function. No
 
 ### IMPORTANT NOTES BEFORE YOU CONTINUE
 - Many of the parts from now on will build upon previous parts. It is **imperative** that you test your implementations to make sure each part works as intended before moving on.
+- You may want to **submit** each part to the **autograder** to ensure that your implementation works before you carry on.
 - You will be copy-pasting your implementations from each **problem** to the next. We provide you with **copying instructions** and *emerald blocks, lapis blocks, and netherite blocks* as **worldedit guides**.
 - You may remove the *emerald blocks, lapis blocks, and netherite blocks* as long as they do not affect functionality of your build.
 - Ensure you read the **instructions for copying** over each part to the next.
@@ -240,10 +239,10 @@ Let's get started by building a single register, with a **reading** function. No
 ### Problem 9: Add Clock Signal
 - Improve your **Register File** by allowing it to write only when it receives a **clock signal**. 
     - This way, we can ensure that writing occurs **only when we want it to**. Practically, this allows the **Register File** to write only when other components in the **CPU** have finished processing, such as when the **ALU** completes a computation. We can adjust the **clock speed** in a **CPU** according to how long this process takes.
-    - The way we will do this is simple. We simply just need to **AND** the **writing address input** with the **clock signal**. In other words, we need to **cancel** the **writing address** from being sent into the **Register File** until a **clock signal** is received.
-    - The **clock signal** input is a lever, that when turned **ON**, generates a **2-tick clock pulse** that gets sent to the **Register File**. Turning **OFF** the lever doesn't do anything. 
+    - To do this, we simply need to **AND** the **writing address input** with the **clock signal**. In other words, we need to **cancel** the **writing address** from being sent into the **Register File** until a **clock signal** is received.
+    - The **clock signal** input is a button, that when **pushed**, generates a **2-tick clock pulse** that gets sent to the **Register File**. 
     - This further motivates letting **000**, the address of **r0**, be the default state of our **decoders**. 
-    - Adding the **clock signal** can be thought of as turning our **d latches** into **d flip-flops**, but not exactly. 
+    - Adding the **clock signal** can be "thought of" as turning our **d latches** into **d flip-flops**. 
 - **Copying instructions**:
      - In **Problem 8**, select the region from the *lapis block* at `(-132, 57, 1)` to the *emerald block* at `(-141, 85, 28)`. Then stand on the *emerald block* and use `//copy`.
     - In **Problem 9**, stand on the *emerald block* at `(-157, 85, 31)` and use `//paste`.
@@ -251,10 +250,10 @@ Let's get started by building a single register, with a **reading** function. No
 - Example test case:
     - Change **Data** to **0000 0001**.
     - Change the **write address** to **001** to write to **r1**.
-    - Turn the **Clock Signal** **ON** and **OFF** to send a **clock pulse** to trigger writing.
+    - Send a **clock pulse** to trigger writing.
     - Change **Data** to **0000 0111**.
     - Change the **write address** to **111** to write to **r7**.
-    - Turn the **Clock Signal** **ON** and **OFF** to send a **clock pulse** to trigger writing.
+    - Send a **clock pulse** to trigger writing.
     - Change the **read address** to **001** to read from **r1**. You should see an output of **0000 0001**.
     - Change the **read address** to **111** to read from **r7**. You should see an output of **0000 0111**.
 - Now, we have a **Single-Read 7-Register File** that does everything we want it to do, for what it is. Recall, the **ALU** takes in **two 8-bit integer inputs**. Currently, we can read the contents of a single register and feed it into one of the **ALU** inputs. 
@@ -284,10 +283,10 @@ Let's get started by building a single register, with a **reading** function. No
 - Example test case:
     - Change **Data** to **0000 0001**.
     - Change the **write address** to **001** to write to **r1**.
-    - Turn the **Clock Signal** **ON** and **OFF** to send a **clock pulse** to trigger writing.
+    - Send a **clock pulse** to trigger writing.
     - Change **Data** to **0000 0111**.
     - Change the **write address** to **111** to write to **r7**.
-    - Turn the **Clock Signal** **ON** and **OFF** to send a **clock pulse** to trigger writing.
+    - Send a **clock pulse** to trigger writing.
     - Change **read address 1 (left)** to **001** to read from **r1**. You should see an **output 1** is **0000 0001**.
     - Change **read address 2 (right)** to **111** to read from **r7**. You should see an **output2** is **0000 0111**.
 - Your implementation should look something like the following image:
@@ -300,7 +299,7 @@ Let's get started by building a single register, with a **reading** function. No
     - Then, since we want the **Register File** to store the intermediate results of **ALU** computations, we feed the *output* of the **ALU** into the **Data** input of the **Register File**. This complies with the following diagram: 
     ![image](https://hackmd.io/_uploads/r1EJMe6h1g.png)
     
-    - This is great! This is amazing! However, you may have realized, if the **ALU** only receives inputs from the **Register File**, and **Register File** only receives inputs from the **ALU**, how do we initially load values into the **Register File** to perform operations on? We need a way to load **immediate** values into the **Register File**. In other words, we need to implement **load immediate (LDI)** instructions (for example, `LDI r1 3` means load an immediate value of `3` into **r1**). The solution: **ADD A MULTIPLEXER!!** (get used to it lol).
+    - This is great! This is amazing! However, you may have realized, if the **ALU** only receives inputs from the **Register File**, and **Register File** only receives inputs from the **ALU**, how do we initially load values into the **Register File** to perform operations on? We need a way to load **immediate** values into the **Register File**. In other words, we need to implement the **load immediate (LDI)** instruction (for example, `LDI r1 3` means load an immediate value of `3` into **r1**). The solution: **ADD A MULTIPLEXER!!** (get used to it lol).
     - We add a **mux** allowing either the **ALU result** or an **immediate value** to be fed into the **data input** of the **Register File**. The **mux** will be controlled via **control signals** coming from the **Control ROM**. With this, we have the following diagram, essentially integrating **three** components of our **CPU** so far *(ALU, Control ROM, Register File)*:
 ![image](https://hackmd.io/_uploads/HkHulep2kg.png)
     - Thus, what we have to do is clear: 
@@ -342,4 +341,8 @@ Let's get started by building a single register, with a **reading** function. No
 - You implementation should look something like this:
 ![image](https://hackmd.io/_uploads/r1v5fzp3Jl.png)
 - And **CONGRATULATIONS!** You've essentially implemented the *bare minimum* components for a **CPU**. You can do some really *crazy* stuff with just an **ALU** and **Register File**, like computing infinitely large sequences of integers (although, we don't have turing completeness just yet...)
-- But... how can we improve this? As you can see, to run but a simple test case of computing the **fibonacci sequence** and executing a simple instruction such as `ADD r4 r3 r2`, we have a **TON** of things to keep track of: the input addresses (read and write) for the **Register File**, and control signals for the **Data MUX** and the **ALU Setting**. As we add more components, this only gets **worse**. We have the **Control ROM** for managing/sending **control signals** to different components in the **CPU**, but how can we automate the input addresses for the **Register File?** This is where **Instruction Memory** and the **Program Counter** come in. The **Instruction Memory** stores the sequence of **instructions** comprising a program, while the **Program Counter** holds a single number keeping track of which instruction we are currently executing. Together, they will allow us to automate the process of sending **read and write addresses** as well as **immediate values** to the **Register File**. An example instruction might look something like: `ADD r3 r0 r2` or `0010001100000010`, where the first four bits describe the **opcode** and the last twelve bits describe the **operands**. The **opcode** for `ADD`, which is `0010`, will get sent to the **Control ROM** which will set the **ALU** to **ADD mode** and set the **Register File** **Data MUX** to **REG ALU**. Meanwhile, **0011** will be sent to the **write address input**, and **0000** and **0010** will be send to the **read address inputs** of the **Register File**. Finally, we await **clock signal** to actually execute the instruction, which will write data  to the register and update the program counter to send the next instruction. This is what we will explore next!! :)
+
+### Moving forward
+- But... how can we improve this? As you can see, to run but a simple test case of computing the **fibonacci sequence** and executing a simple instruction such as `ADD r4 r3 r2`, we have a **TON** of things to keep track of: the input addresses (read and write) for the **Register File**, and control signals for the **Data MUX** and the **ALU Setting**. As we add more components, this only gets **worse**. We have the **Control ROM** for managing/sending **control signals** to different components in the **CPU**, but how can we automate the input addresses for the **Register File?** 
+- This is where **Instruction Memory** and the **Program Counter** come in. The **Instruction Memory** physically stores the sequence of **instructions** comprising a program, while the **Program Counter** holds the address of the instruction to execute. Together, they will allow us to automate the process of sending **read and write addresses** as well as **immediate values** to the **Register File**. 
+- An example instruction might look something like: `ADD r3 r0 r2` or `0010001100000010`, where the first four bits describe the **opcode** and the last twelve bits comprise the **operands**. The **opcode** for `ADD`, which is `0010`, will get sent to the **Control ROM** which will set the **ALU** to **ADD mode** and set the **Register File** **Data MUX** to **REG ALU**. Meanwhile, **0011** will be sent to the **write address input**, and **0000** and **0010** will be send to the **read address inputs** of the **Register File**. Finally, we await **clock signal** to actually execute the instruction, which will write data  to the register and update the program counter to send the next instruction. This is what we will explore next!! :)
