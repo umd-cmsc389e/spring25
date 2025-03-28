@@ -159,8 +159,7 @@ The reason why we have **two read addresses** and **two outputs** is because we 
 
 In order to read two registers in the **Register File** at the same time, we will explore **Dual-Read** as you will see in the later parts. The multiplexer going into the **Data** input of the **Register File** allows us to select whether an **Immediate Value** or the **ALU Result** gets written into the **Register File**. With this, we'll be able to perform the successive computations that we've been dreaming about above! This is a high-level overview of what we want to achieve in this project.
 
-Note, the **Register File** that we will be implementing in this project contains **SEVEN** registers addressed **r1, r2, r3, r4, r5, r6, and r7**. Note, we do not implement **r0** as we will reserve it to be the **zero register** - a **register** whose value is always **zero**. This may seem useless at first, but we will so that it's actually quite *nifty ඞ*. The implemented **Register File** will be similar to that of the diagram you saw **in class**, except we only have **seven** instead of **eight** registers, and **dual-read** is implemented via **simulated-dual read**:
-![image](https://hackmd.io/_uploads/S1GIg1K2kl.png)
+Note, the **Register File** that we will be implementing in this project contains **SEVEN** registers addressed **r1, r2, r3, r4, r5, r6, and r7**. Note, we do not implement **r0** as we will reserve it to be the **zero register** - a **register** whose value is always **zero**. This may seem useless at first, but we will so that it's actually quite *nifty ඞ*. 
 
 Let's get started by building a single register, with a **reading** function. Note, the **reading** function simulates a **multiplexer** when we add more registers!
 
@@ -271,7 +270,9 @@ Let's get started by building a single register, with a **reading** function. No
      - In **Problem 9**, select the region from the *lapis block* at `(-148, 57, 1)` to the *emerald block* at `(-157, 85, 31)`. Then stand on the *emerald block* and use `//copy`.
     - In **Problem 10**, stand on the *emerald block* at `(-183, 85, 31)` and use `//paste`.
 - **Hint 10:** We provide you with some practice with the worldedit `//flip` command. Use `//flip` to mirror the decoder so it looks like the following image:
-![image](https://hackmd.io/_uploads/HyOnfk621g.png)
+
+    ![image](https://hackmd.io/_uploads/HyOnfk621g.png)
+    
     - There are many ways to use `//flip` correctly, depending on where you are facing. Experiment with `//flip back`, `//flip right`, etc. to get a sense for how flip works.
     - You may want to read the **Worldedit hint** below before attempting!
 - **Worldedit hint**:
@@ -337,6 +338,7 @@ Let's get started by building a single register, with a **reading** function. No
     In the end, **r6** should contain a value of **233**, the **13th** fibonacci number!
     - To run an instruction like `ADD r4 r3 r2`, ensure the inputs **read address 1** is **r3**, **read address 2** is **r2**, **write address** is **r4**, the **ALU setting** is **ADD**, and the **Data MUX** is set to **REG ALU**.  Then, send a **clock signal**.
     - To run an instruction like `LDI r1 1`, ensure **write address** is **r1**, the immediate input is **1**, and the **Data MUX** is set to **REG IMMEDIATE**. Then, send a **clock signal**. 
+    - To check the contents of a register like `r6`, you enter an instruction like `ADD r0 r0 r6` and look at the **ALU result**. Executing the instruction does nothing because we are storing into `r0`, the **zero register**.
 - You implementation should look something like this:
 ![image](https://hackmd.io/_uploads/r1v5fzp3Jl.png)
 - And **CONGRATULATIONS!** You've essentially implemented the *bare minimum* components for a **CPU**. You can do some really *crazy* stuff with just an **ALU** and **Register File**, like computing infinitely large sequences of integers (although, we don't have turing completeness just yet...)
