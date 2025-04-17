@@ -132,12 +132,13 @@ Great, we now have a program counter that *may* look similar to:
     **DON'T FORGET TO USE THE -a FLAG OR YOU WILL CLOBBER PART OF THE INSTRUCTION MEMORY**.
 
 2. Ensure that the program counter signal connects to the register file write signal. This **synchronizes** the clock from project 3 to the one you have just pasted!
+
+    **We have already inserted instruction memory for the fibonacci sequence shown in the next step; however, if you do not want to make your own program, SKIP TO STEP 7**
     
     ![image](https://hackmd.io/_uploads/rymoOKCCJl.png)
     
-    **We have already inserted instruction memory for the fibonacci sequence shown in the next step; however, if you do not want to make your own program, SKIP TO STEP 7**
-
-3. [**OPTIONAL**] Create a new file named `fibonacci.as` and paste the following contents into it:
+   
+4. [**OPTIONAL**] Create a new file named `fibonacci.as` and paste the following contents into it:
 
         LDI R1 1
         ADD R2 R1 R0
@@ -148,11 +149,11 @@ Great, we now have a program counter that *may* look similar to:
         
     >If you would like to write your own program for fun, please note that you can only abide by the **operations, memory, and signals** utilized in the current CPU build.
 
-4. [**OPTIONAL**] We have provided three scripts: `main.py`,`assembler.py`, and `schematic.py`. Make sure `fibonacci.as` and all the scripts are in the same folder. Then, run the following command in your terminal: `./main.py fibonacci.as`
+5. [**OPTIONAL**] We have provided three scripts: `main.py`,`assembler.py`, and `schematic.py`. Make sure `fibonacci.as` and all the scripts are in the same folder. Then, run the following command in your terminal: `./main.py fibonacci.as`
     
-5. [**OPTIONAL**] For the following, you will need to have the **litematica** and **malilib** mods installed (refer to [setup/downloads](https://github.com/umd-cmsc389e/spring25/tree/main/setup)). Navigate to your schematics folder, located in `.Minecraft > schematics`. Paste the produced schematic file (ex. `fibonacciprogram.schem`) into that directory.
+6. [**OPTIONAL**] For the following, you will need to have the **litematica** and **malilib** mods installed (refer to [setup/downloads](https://github.com/umd-cmsc389e/spring25/tree/main/setup)). Navigate to your schematics folder, located in `.Minecraft > schematics`. Paste the produced schematic file (ex. `fibonacciprogram.schem`) into that directory.
     
-6. [**OPTIONAL**] Now, in your minecraft world, stand at **-187, 91, 35** and press `m` on your keyboard. A litematica UI should pop up. First, in the lower left hand side, ensure the tool mode reads "Schematic Placement". Next, you should see a button labeled `load schematics`. Click on it and select the `fibonacciprogram.schem` file, then select `load schematic` at the bottom left. Press escape and then click on `Schematic Placements`. Click on the `configure` button for the `fibonacciprogram` schematic. Now, click the `Rotation` button on the right hand side of the screen until it reads `CW_180`. Now escape out of all the menus. You should see all the blocks and repeaters in place:
+7. [**OPTIONAL**] Now, in your minecraft world, stand at **-187, 91, 35** and press `m` on your keyboard. A litematica UI should pop up. First, in the lower left hand side, ensure the tool mode reads "Schematic Placement". Next, you should see a button labeled `load schematics`. Click on it and select the `fibonacciprogram.schem` file, then select `load schematic` at the bottom left. Press escape and then click on `Schematic Placements`. Click on the `configure` button for the `fibonacciprogram` schematic. Now, click the `Rotation` button on the right hand side of the screen until it reads `CW_180`. Now escape out of all the menus. You should see all the blocks and repeaters in place:
 
 ![image](https://hackmd.io/_uploads/Sy-PGzUCJg.png)
 
