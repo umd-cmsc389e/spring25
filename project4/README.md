@@ -72,7 +72,7 @@ Add a clock that repeatedly produces the **2-tick pulse** from Step 1.
 
 > **Hint**: A comparator takes one real tick to propagate signal
   
-> 💡 **Note 1**: We've provided a **33-tick period clock** (*66 game ticks*) with a 2-tick output pulse and a **halt signal**. You’re welcome to model off of it's clock portion—it’s reliable and integrates well with later components.
+> 💡 **Note 1**: We've provided a **33-tick period clock** (*66 game ticks*) with a 3-tick output pulse and a **halt signal**. You’re welcome to model off of it's clock portion—it’s reliable and integrates well with later components.
 
 ---
 ### Step 3: Reuse Your 4-Bit Adder from P1 
