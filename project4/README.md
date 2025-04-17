@@ -8,8 +8,8 @@ This project involves building a fully functioning **program counter** in Minecr
 ## Importing Projects
 To import the project, you need to download `project4.zip`, extract it, and move it into the `saves` folder of your Fabric installation folder. The easiest way of doing this is the following:
 
-1. Download `project4 TEMPLATE.zip` from this directory
-2. Locate your `./Downloads` folder and extract the contents of `project4 TEMPLATE.zip`
+1. Download `project4.zip` from this directory
+2. Locate your `./Downloads` folder and extract the contents of `project4.zip`
 3. Locate the `project4` inside of the folder you extracted into
 4. Use `Ctrl + X` on the `project4` folder to cut it, saving it into your clipboard
 5. Go to your Minecraft Launcher and locate the **Installation Folder** for `fabric-loader-1.20.1`, similar to what you did during setup. Click on "Open installations folder"
