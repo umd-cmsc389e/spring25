@@ -86,7 +86,7 @@ Let's bring back your **4-bit full adder** from Project 1!
 
 ### Step 4: Build Counter w/ Pulse
 
-Recreate your 4-bit adder and turn it into a counter that only updates **on each pulse**. Note, your input/output redstone lamps **must** stay in the same location.
+Recreate your 4-bit adder and turn it into a counter that only updates **on a 2-tick pulse**. Note, your input/output redstone lamps **must** stay in the same location. You can use the 2-tick pulse from step 1 for this part.
 
 - **Registers**: You need four, **1-bit registers** (use d-latches)
 - **Register Logic**:
