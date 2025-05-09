@@ -76,7 +76,7 @@ Your task will be to do the following:
 ![image](https://hackmd.io/_uploads/H1w17xjlxg.png)
 
 
-4. After this, hit `m` and navigate to `configuration menu`, then hit the `hotkeys` menu. Select a hotkey for the **executeOperation** field. Now exit all the litematica menus and use that hotkey. All your instruction memory should now be pasted in properly!
+4. After this, hit `m` and navigate to `configuration menu`, then hit the `hotkeys` menu. Select a hotkey for the **executeOperation** field. Now exit all the litematica menus and **grab a wooden stick** and use that hotkey. All your instruction memory should now be pasted in properly!
         
 
 ### 5. Run the Minecraft CPU
