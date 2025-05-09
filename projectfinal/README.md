@@ -49,7 +49,7 @@ Your task will be to do the following:
     - Implement your favorite sorting algorithm (bubble/selection/insertion/quick, etc.)
     - Perform multiplication of two numbers
     - Draw a smiley face
-- Use the following instruction set and example programs:
+- Use the following [instruction set](https://docs.google.com/spreadsheets/d/12urAGQ1eXuVUJTJ9l9LwMtBRvsr5gCwXs8DY92yWrZw/edit?usp=sharing) and example [programs](https://github.com/mattbatwings/BatPU-2/tree/main/programs) as reference
 
 ### 2. Use `main.py` to compile your assembly program into a schematic
 - To use `main.py`, simply run `python main.py [filename]` where `filename` is your assembly program.
