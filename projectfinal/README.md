@@ -84,9 +84,11 @@ Your task will be to do the following:
    
 ![image](https://hackmd.io/_uploads/Hk3_pM3lel.png)
 
-5. Then hit the `hotkeys` menu. In the generic tab Select a hotkey for the **executeOperation** field. Now exit all the litematica menus and **grab a wooden stick** and use that hotkey. All your instruction memory should now be pasted in properly!
+5. Then hit the `hotkeys` menu. In the generic tab Select a hotkey for the **executeOperation** field.
 
 ![image](https://github.com/user-attachments/assets/b2a25d98-4b76-420d-8f9c-685159cc9d58)
+
+6. Now exit all the litematica menus and **grab a wooden stick** and use that hotkey. All your instruction memory should now be pasted in properly!
 
 ### 5. Run the Minecraft CPU
 Before running the program, ensure you run `/tick rate 500` otherwise the program will take too long to run. If you feel you need to speed up your program further and your OS is Windows (_sorry mac users_), you can dabble into using MCHPRS - a custom server designed to speedup redstone to incredible speeds.  
