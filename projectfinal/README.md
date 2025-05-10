@@ -44,6 +44,7 @@ We also provide you with the following scripts:
 Your task will be to do the following:
 ### 1. Write an assembly program of your choice!
 - Your program can do anything. Here are some ideas:
+  
     - Compute the fibonacci sequence up to 255
     - Compute the primes up to 255
     - Implement your favorite sorting algorithm (bubble/selection/insertion/quick, etc.)
@@ -88,7 +89,9 @@ Your task will be to do the following:
 ![image](https://github.com/user-attachments/assets/b2a25d98-4b76-420d-8f9c-685159cc9d58)
 
 ### 5. Run the Minecraft CPU
-Run the program!
+Before running the program, ensure you run `/tick rate 500` otherwise the program will take too long to run. If you feel you need to speed up your program further and your OS is Windows (_sorry mac users_), you can dabble into using MCHPRS - a custom server designed to speedup redstone to incredible speeds.  
+
+Now, Run the program!
 
 ![image](https://hackmd.io/_uploads/B1J2Vgjexx.png)
 
