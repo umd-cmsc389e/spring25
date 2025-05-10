@@ -62,10 +62,10 @@ Your task will be to do the following:
 
 ### 4. Paste the schematic into the completed CPU implementation
 
-1. Now, in your minecraft world, stand at the diamond block at **109, 90, 43** and press `m` on your keyboard. A litematica UI should pop up. In the lower left hand side, ensure the tool mode reads **"Schematic Placement"**. 
+1. Now, in your minecraft world, stand at the diamond block at **109, 90, 43** and press `m` on your keyboard. A litematica UI should pop up. In the lower left hand side, ensure the tool mode reads **"Place Schematic in world"**. 
 
 
-![image](https://hackmd.io/_uploads/rylnkxigee.png)
+![image](https://hackmd.io/_uploads/H1NxiGhggg.png)
 
 2. Next, you should see a button labeled `load schematics`. Click on it and select your schematic file (ex. `fibonacciprogram.schem`), then select `load schematic` at the bottom left. 
 
@@ -77,12 +77,20 @@ Your task will be to do the following:
 ![image](https://hackmd.io/_uploads/H1w17xjlxg.png)
 
 
-4. After this, hit `m` and navigate to `configuration menu`, then hit the `hotkeys` menu. Select a hotkey for the **executeOperation** field. Now exit all the litematica menus and **grab a wooden stick** and use that hotkey. All your instruction memory should now be pasted in properly!
-        
+4. After this, hit `m` and navigate to `configuration menu`. In the `generic` menu, find the `pasteReplaceBehavior` and `placementReplaceeBehavior`, and set them to non-air.
+   
+![image](https://hackmd.io/_uploads/Hk3_pM3lel.png)
+
+5. Then hit the `hotkeys` menu. In the generic tab Select a hotkey for the **executeOperation** field. Now exit all the litematica menus and **grab a wooden stick** and use that hotkey. All your instruction memory should now be pasted in properly!
+
+![image](https://github.com/user-attachments/assets/b2a25d98-4b76-420d-8f9c-685159cc9d58)
 
 ### 5. Run the Minecraft CPU
 Run the program!
+
 ![image](https://hackmd.io/_uploads/B1J2Vgjexx.png)
+
+> If you want to unload the memory, go to the litematica menu -> loaded schematics -> unload your specific schematic.
 
 ### 6. Gather results, and verify the program.
 - Take screenshots, take note of things you've observed.
@@ -90,5 +98,6 @@ Run the program!
 ### 7. Compile a report
 - 1 to 2 paragraphs, should not be long. Just tell us:
     - What did your program aim to accomplish?
+    - How long did it take to run?
     - Did you run into any problems? If so, how did you solve them?
     - How did you verify your program? Include screenshots if you want :D
