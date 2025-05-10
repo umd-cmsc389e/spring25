@@ -51,11 +51,11 @@ Your task will be to do the following:
     - Draw a smiley face
 - Use the following [instruction set](https://docs.google.com/spreadsheets/d/12urAGQ1eXuVUJTJ9l9LwMtBRvsr5gCwXs8DY92yWrZw/edit?usp=sharing) and example [programs](https://github.com/mattbatwings/BatPU-2/tree/main/programs) as reference
 
+> If you want to do something with character arrays, look more into matbatwings' readme. It has information on how to use character buffers. You don't need to worry about things like ASCII (the scripts will take care of that). In a way, the assembly is a bit more modern.
+
 ### 2. Use `main.py` to compile your assembly program into a schematic
 - To use `main.py`, simply run `python main.py [filename]` where `filename` is your assembly program.
 - Note: The assembly file you want to compile should be in a `programs` folder on the same level as `main.py`.
-
-> If you want to do something with character arrays, look more into matbatwings' readme. It has information on how to use character buffers. You don't need to worry about things like ASCII (the scripts will take care of that). In a way, the assembly is a bit more modern.
 
 ### 3. Move the schematic into your `./schematics` folder
 - You will need the **litematica** and **malilib** mods, which you should have installed during the **setup** project. If you don't have them, then refer to [setup/downloads](https://github.com/umd-cmsc389e/spring25/tree/main/setup). 
