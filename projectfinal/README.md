@@ -22,7 +22,7 @@ The final project will be submitted via **Gradescope**. For this project, you wi
 
 ## Resources
 
-* **Final Project Video** (to be added)
+* [**Final Project Video (from in class)**](https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=19c78159-3359-4f17-ac54-b2d800f95308)
 * [**BATPU-2 Readme & Sample Programs**](https://github.com/mattbatwings/BatPU-2)
 * [**BATPU-2 Instructions Set**](https://docs.google.com/spreadsheets/d/12urAGQ1eXuVUJTJ9l9LwMtBRvsr5gCwXs8DY92yWrZw/edit?usp=sharing)
 * [**Minecraft CPU Simulator**](https://github.com/AdoHTQ/Batpu2-VM/releases) - will be useful for crafting your program!
